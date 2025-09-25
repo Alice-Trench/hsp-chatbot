@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #ffffff 57.29%, #eef6fe 100%);
+  background: #3C9DCB;
   box-shadow:
     0px 2px 4px rgba(0, 0, 0, 0.14),
     0px 0px 2px rgba(0, 0, 0, 0.12);
@@ -53,16 +53,19 @@
   margin-top: 20px;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
+  font-size: 18px;
+  line-height: 160%;
   align-items: flex-end;
   text-align: center;
   letter-spacing: -0.01em;
-  color: #616161;
+  color: black;
+  max-width: 800px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .chatIcon {
-  height: 62px;
+  height: 156px;
   width: auto;
 }
 
