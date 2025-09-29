@@ -22,9 +22,9 @@ jobs:
         #password: ${{ secrets.SAMPLEAPP_ACR_PASSWORD }}
         # Container registry server url
         #login-server: sampleappaoaichatgpt.azurecr.io
-        app-name: chatbot-dokumente-fertigung
+        app-name: "chatbot-dokumente-fertigung"
         publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
-        slot-name: newslot
+        slot-name: "newslot"
         images: acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:latest
         
         
@@ -35,4 +35,3 @@ jobs:
         docker tag acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:latest;
         docker push acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
         docker push acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:latest;
-      
