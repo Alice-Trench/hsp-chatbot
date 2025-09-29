@@ -351,7 +351,7 @@
         }
     },
     "variables": {
-        "WebAppImageName": "DOCKER|acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:latest",
+        "WebAppImageName": "DOCKER|acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:latest",
         "cosmosdb_account_name": "[format('db-{0}', parameters('WebsiteName'))]",
         "cosmosdb_database_name": "db_conversation_history",
         "cosmosdb_container_name": "conversations",

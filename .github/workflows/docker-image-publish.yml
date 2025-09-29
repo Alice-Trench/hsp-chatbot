@@ -25,13 +25,13 @@ jobs:
         app-name: "chatbot-dokumente-fertigung"
         publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
         slot-name: "newslot"
-        images: acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:latest
+        images: acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:latest
         
         
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run:         
-        docker build . --file WebApp.Dockerfile --tag acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
-        docker tag acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:latest;
-        docker push acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
-        docker push acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:latest;
+        docker build . --file WebApp.Dockerfile --tag acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
+        docker tag acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:latest;
+        docker push acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
+        docker push acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:latest;
