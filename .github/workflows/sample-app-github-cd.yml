@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: 'newslot'
+      name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
       id-token: write #This is required for requesting the JWT
@@ -74,7 +74,7 @@ jobs:
         id: deploy-to-webapp
         with:
           #app-name: 'sample-app-github-cd'
-          slot-name: "newslot"
+          # slot-name: "newslot"
           app-name: "Chatbot-Dokumente-Fertigung"
           publish-profile: ${{secrets.AZUREWEBAPPPUBLISHPROFILE}}
           #images: acrhspchatbotwesteurope.azurecr.io/hsp-chatbot-20250926:latest
