@@ -13,17 +13,17 @@ jobs:
 
     steps:
     - name: Azure Container Registry Login
-      uses: azure/webapps-deploy@v2
-      #uses: Azure/docker-login@v2
+      #uses: azure/webapps-deploy@v2
+      uses: Azure/docker-login@v2
       with:
         # Container registry username
-        #username: ${{ secrets.SAMPLEAPP_ACR_USERNAME }}
+        username: ${{ secrets.SAMPLEAPP_ACR_USERNAME }}
         # Container registry password
-        #password: ${{ secrets.SAMPLEAPP_ACR_PASSWORD }}
+        password: ${{ secrets.SAMPLEAPP_ACR_PASSWORD }}
         # Container registry server url
-        #login-server: sampleappaoaichatgpt.azurecr.io
+        login-server: ${{ secrets.ACR_LOGIN_SERVER }}
         app-name: "chatbot-dokumente-fertigung"
-        publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
+        #publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
         slot-name: "newslot"
         images: acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:latest
         
