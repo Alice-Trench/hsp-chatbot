@@ -16,12 +16,12 @@ jobs:
       #uses: azure/webapps-deploy@v2
       uses: Azure/docker-login@v2
       with:
-        # Container registry username
-        username: ${{ secrets.SAMPLEAPP_ACR_USERNAME }}
-        # Container registry password
-        password: ${{ secrets.SAMPLEAPP_ACR_PASSWORD }}
         # Container registry server url
         login-server: ${{ secrets.ACR_LOGIN_SERVER }}
+        # Container registry username
+        username: ${{ secrets.ACR_USERNAME }}
+        # Container registry password
+        password: ${{ secrets.ACR_PASSWORD }}
         #app-name: "chatbot-dokumente-fertigung"
         #publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
         #slot-name: "newslot"
