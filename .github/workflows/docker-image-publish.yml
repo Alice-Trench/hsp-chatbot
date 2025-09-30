@@ -22,10 +22,10 @@ jobs:
         password: ${{ secrets.SAMPLEAPP_ACR_PASSWORD }}
         # Container registry server url
         login-server: ${{ secrets.ACR_LOGIN_SERVER }}
-        app-name: "chatbot-dokumente-fertigung"
+        #app-name: "chatbot-dokumente-fertigung"
         #publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
-        slot-name: "newslot"
-        images: acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:latest
+        #slot-name: "newslot"
+        #images: acrhspchatbotwesteurope-hpcagranh6gward8.azurecr.io/hsp-chatbot-20250926:latest
         
         
     - uses: actions/checkout@v3
